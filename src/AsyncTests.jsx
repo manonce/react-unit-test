@@ -5,12 +5,9 @@ class AsyncTests extends Component {
   constructor(){
     super()
     this.asyncFunction = this.asyncFunction.bind(this);
-    this.timeoutFn = this.timeoutFn.bind(this);
-    this.intervalFn = this.intervalFn.bind(this);
     this.axiosFn = this.axiosFn.bind(this);
     this.state = {
-      data: [],
-      index: 0
+      data: []
     }
   }
 
@@ -27,22 +24,6 @@ class AsyncTests extends Component {
     })
   }
 
-  timeoutFn(){
-    setTimeout(()=>{
-      this.setState({
-        index: 10
-      })
-    },1000)
-  }
-
-  intervalFn(){
-    setInterval(()=>{
-      this.setState({
-        index: this.state.index + 1
-      })
-    },5000)
-  }
-  
   asyncFunction(){
     fetch('http://google.com/somedata.json').then((data)=>{
       this.setState({
@@ -52,7 +33,6 @@ class AsyncTests extends Component {
       this.setState({
         data: error
       })
-      // alert(error);
     })
   }
   render() {

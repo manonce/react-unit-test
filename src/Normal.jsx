@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class NormalTests extends Component{
+class Normal extends Component{
     constructor(){
         super();
         this.state = {
@@ -25,4 +25,4 @@ class NormalTests extends Component{
     }
 }
 
-export default NormalTests;
+export default Normal;
