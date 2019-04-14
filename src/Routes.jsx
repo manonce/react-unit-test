@@ -50,24 +50,24 @@ export class NoMatch extends Component{
 
 class Routes extends Component{
 
-    render(){
-        return(
-            <div>
-                <Router>
-                    <div>
-                        <Route exact path="/" component={Home}/>
-                        <Route exact path="/news" component={News}/>
-                        <Route exact path="/news/techdomain" component={News}/>
-                        <Route component={NoMatch} />
-                        <Link to="/" >Home page</Link><br/>
-                        <Link to="/news">News page</Link><br/>
-                        <Link to="/news/techdomain">News page for techdomain </Link>
+  render(){
+    return(
+      <div>
+        <Router>
+          <div>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/news" component={News}/>
+            <Route exact path="/news/techdomain" component={News}/>
+            <Route component={NoMatch} />
+            <Link to="/" >Home page</Link><br/>
+            <Link to="/news">News page</Link><br/>
+            <Link to="/news/techdomain">News page for techdomain </Link>
 
-                    </div>
-                </Router>
-            </div>
-        )
-    }
+          </div>
+        </Router>
+      </div>
+    )
+  }
 }
 
 export default Routes;

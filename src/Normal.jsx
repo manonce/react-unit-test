@@ -18,7 +18,7 @@ class Normal extends Component{
     render(){
         return(
             <div>
-                <span id="index">{this.state.index}</span>
+                <span id="index" data-testid="normal-index">{this.state.index}</span>
                 <button onClick={this.incrementIndex}>Increment Index</button>
             </div>
         )

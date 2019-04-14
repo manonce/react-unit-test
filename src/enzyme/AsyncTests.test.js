@@ -5,8 +5,7 @@ import waitUntil from 'async-wait-until';
 import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 import _ from 'lodash';
-import AsyncTests from './AsyncTests';
-import './setUpTests';
+import AsyncTests from '../AsyncTests';
 
 
 describe('AsyncTests',()=>{

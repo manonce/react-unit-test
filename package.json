@@ -78,7 +78,8 @@
     "async-wait-until": "^1.2.4",
     "axios-mock-adapter": "^1.15.0",
     "nock": "^10.0.5",
-    "react-test-renderer": "^16.7.0"
+    "react-test-renderer": "^16.7.0",
+    "react-testing-library": "^6.1.2"
   },
   "jest": {
     "verbose": false,
@@ -90,7 +91,7 @@
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/enzyme/setupTests.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"

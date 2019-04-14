@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ReduxTests } from './ReduxTests';
-import './setUpTests';
+import { ReduxTests } from '../ReduxTests';
 
 describe('ReduxTests', ()=>{
     it('should call increment index on click of button',()=>{

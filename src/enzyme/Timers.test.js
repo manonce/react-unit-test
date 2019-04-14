@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Timers from './Timers';
+import Timers from '../Timers';
 
 describe('settimeout fn', ()=>{
     it('should increment index by 1 after 1 second (using advanceTimersByTime)', ()=>{
