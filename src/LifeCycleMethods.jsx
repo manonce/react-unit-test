@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
 
 class LifecycleMethods extends Component{
-    constructor(){
-        this.fetchSomething();
-    }
+
     componentWillMount(){
-        this.fetchSomething();
+        this.incrementIndex();
     }
 
     componentDidMount(){
-        this.fetchSomething();
+        this.incrementIndex();
     }
 
     componentDidUpdate(){
-        this.fetchSomething();
+        this.incrementIndex();
     }
 
     componentWillUnmount(){
-        this.fetchSomething();
+        this.incrementIndex();
     }
 
     componentDidCatch(error){
-        this.fetchSomething(error);
+        this.incrementIndex(error);
     }
 
     
@@ -33,7 +31,7 @@ class LifecycleMethods extends Component{
     render(){
         return(
             <div>
-
+                
             </div>
         )
     }
