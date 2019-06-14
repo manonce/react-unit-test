@@ -6,7 +6,7 @@ import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 import _ from 'lodash';
 import AsyncTests from '../AsyncTests';
-
+import {List} from '../AsyncTests';
 
 describe('AsyncTests',()=>{
   it('renders without crashing', () => {
@@ -78,6 +78,23 @@ describe('AsyncTests',()=>{
         return !_.isEmpty(app.state('data'));
     });
     expect(app.state('data')).toEqual({name:'abc'})
+    done();
+  })
+
+  it('should render the list', async (done) => {
+    const mock = new MockAdapter(axios);
+    mock.onGet(/.*/g).reply(200, [1,2,3]);
+    const app = shallow(<AsyncTests />);
+    app.setState({
+      data:[]
+    });
+    app.instance().axiosFn();
+    await waitUntil(()=>{
+        return !_.isEmpty(app.state('data'));
+    });
+    expect(app.state('data')).toEqual([1,2,3]);
+    app.instance().forceUpdate();
+    expect(app.find(List)).toHaveLength(1)
     done();
   })
 

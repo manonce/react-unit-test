@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { map } from 'lodash';
 import axios from 'axios';
 
 class AsyncTests extends Component {
@@ -36,12 +37,19 @@ class AsyncTests extends Component {
     })
   }
   render() {
+    const { data } = this.state;
     return (
       <div className="App">
+        <List data={data}/>
         <button id="async" onClick={this.asyncFunction}>Async Function</button>
       </div>
     );
   }
+}
+
+export const List = (props)=>{
+  const { data } = props;
+  return map(data, d => <span className="index">{d}</span>)
 }
 
 export default AsyncTests;
