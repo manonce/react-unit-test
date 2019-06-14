@@ -63,7 +63,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "prettier": "prettier --no-config --write 'src/**/*'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -78,6 +79,8 @@
     "async-wait-until": "^1.2.4",
     "axios-mock-adapter": "^1.15.0",
     "nock": "^10.0.5",
+    "prettier": "1.18.2",
+    "prettier-loader": "^2.1.1",
     "react-test-renderer": "^16.7.0",
     "react-testing-library": "^6.1.2"
   },

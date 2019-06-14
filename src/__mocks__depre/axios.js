@@ -1,5 +1,5 @@
-module.exports = jest.fn((url) => {
-    return Promise.resolve({
-        name: 'abc'
-    });
-})
+module.exports = jest.fn(url => {
+  return Promise.resolve({
+    name: "abc"
+  });
+});

@@ -1,40 +1,31 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-class LifecycleMethods extends Component{
+class LifecycleMethods extends Component {
+  componentWillMount() {
+    this.incrementIndex();
+  }
 
-    componentWillMount(){
-        this.incrementIndex();
-    }
+  componentDidMount() {
+    this.incrementIndex();
+  }
 
-    componentDidMount(){
-        this.incrementIndex();
-    }
+  componentDidUpdate() {
+    this.incrementIndex();
+  }
 
-    componentDidUpdate(){
-        this.incrementIndex();
-    }
+  componentWillUnmount() {
+    this.incrementIndex();
+  }
 
-    componentWillUnmount(){
-        this.incrementIndex();
-    }
+  componentDidCatch(error) {
+    this.incrementIndex(error);
+  }
 
-    componentDidCatch(error){
-        this.incrementIndex(error);
-    }
+  fetchSomething = () => {};
 
-    
-
-    fetchSomething = ()=>{
-        
-    }
-
-    render(){
-        return(
-            <div>
-                
-            </div>
-        )
-    }
+  render() {
+    return <div></div>;
+  }
 }
 
 export default LifecycleMethods;
