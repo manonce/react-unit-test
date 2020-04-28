@@ -8,7 +8,7 @@ class AsyncTests extends Component {
     this.asyncFunction = this.asyncFunction.bind(this);
     this.axiosFn = this.axiosFn.bind(this);
     this.state = {
-      data: []
+      data: [1,2]
     };
   }
 
@@ -44,7 +44,7 @@ class AsyncTests extends Component {
     return (
       <div className="App">
         <List data={data} />
-        <button id="async" onClick={this.asyncFunction}>
+        <button id="async" onClick={this.axiosFn}>
           Async Function
         </button>
       </div>
@@ -54,7 +54,10 @@ class AsyncTests extends Component {
 
 export const List = props => {
   const { data } = props;
-  return map(data, d => <span className="index">{d}</span>);
+  if(data.length === 0){
+    return <div>Loading</div>
+  }
+  return map(data, d => <span className="index2">{d}</span>);
 };
 
 export default AsyncTests;

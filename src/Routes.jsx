@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-// export const Home = ()=>{
-//     return <div>Home Page</div>
-// }
 export class Home extends Component {
   render() {
     return <div>Home Page</div>;
@@ -20,28 +17,6 @@ export class NoMatch extends Component {
     return <div>404 page</div>;
   }
 }
-
-// class News extends Component{
-//     constructor(){
-//         super();
-//         this.state = {
-//             index: 0
-//         }
-//     }
-//     componentDidMount(){
-//         setTimeout(()=>{
-//             this.setState({
-//                 index: 1
-//             })
-//         }, 1000)
-//     }
-//     render(){
-//         // const {location} = this.props;
-//         return(
-//             <div>News Feed {this.state.index}</div>
-//         )
-//     }
-// }
 
 class Routes extends Component {
   render() {

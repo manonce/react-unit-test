@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Object {
+  "children": Array [
+    Any<String>,
+  ],
+  "props": Object {
+    "className": "App",
+  },
+  "type": "div",
+}
+`;

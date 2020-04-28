@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
+import AsyncTests from './AsyncTests';
 import reducer from "./reducer";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
@@ -11,7 +12,7 @@ const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AsyncTests />
   </Provider>,
   document.getElementById("root")
 );
